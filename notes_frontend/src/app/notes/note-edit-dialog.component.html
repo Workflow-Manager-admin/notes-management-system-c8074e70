@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{ mode === 'create' ? 'Create Note' : 'Edit Note' }}</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" class="note-dialog-form" autocomplete="off">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" required maxlength="50" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Note</mat-label>
+    <textarea matInput formControlName="body" rows="5" required maxlength="1500"></textarea>
+  </mat-form-field>
+  <div class="form-actions">
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || loading">
+      {{ mode === 'create' ? 'Create' : 'Update' }}
+    </button>
+    <button mat-button type="button" (click)="close()" [disabled]="loading">Cancel</button>
+    <span *ngIf="loading"><mat-spinner diameter="20"></mat-spinner></span>
+  </div>
+</form>

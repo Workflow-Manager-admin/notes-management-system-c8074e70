@@ -1,0 +1,52 @@
+.notes-list-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 2rem auto;
+  background: var(--color-surface);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(70,70,70,0.06);
+  padding: 1.3rem 1.4rem 2rem 1.4rem;
+}
+.notes-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.notes-list-header h2 {
+  color: var(--color-primary);
+}
+mat-list-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: .6em 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.note-summary {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  cursor: pointer;
+}
+.note-summary h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--color-secondary);
+}
+.note-date {
+  font-size: 0.9em;
+  color: #666;
+}
+.actions button {
+  margin-left: .4em;
+}
+.notes-empty {
+  color: #888;
+  padding: 1.5em;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .notes-list-container { padding: .8rem .3rem 1.2rem .3rem;}
+}

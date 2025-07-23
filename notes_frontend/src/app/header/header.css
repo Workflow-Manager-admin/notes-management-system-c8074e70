@@ -1,0 +1,27 @@
+mat-toolbar {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  min-height: 56px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  box-shadow: 0 1px 8px rgba(25,118,210,.07);
+}
+
+.brand {
+  font-size: 1.45rem;
+  cursor: pointer;
+  letter-spacing: -.02em;
+  font-weight: bold;
+  color: #fff;
+}
+.spacer { flex: 1 1 auto; }
+a, button[mat-button] {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .brand { font-size: 1rem;}
+  mat-toolbar { min-height: 48px; }
+}

@@ -1,0 +1,28 @@
+<div class="notes-list-container">
+  <div class="notes-list-header">
+    <h2>Your Notes</h2>
+    <button mat-raised-button color="accent" (click)="openCreateDialog()">
+      <mat-icon>add</mat-icon> New Note
+    </button>
+  </div>
+  <div class="notes-list-content">
+    <mat-progress-spinner *ngIf="loading" diameter="32"></mat-progress-spinner>
+    <div class="notes-empty" *ngIf="!loading && notes.length === 0">No notes found.</div>
+    <mat-list>
+      <mat-list-item *ngFor="let note of notes">
+        <div class="note-summary" (click)="selectNote(note)">
+          <h3>{{ note.title }}</h3>
+          <span class="note-date">{{ note.updated_at | date:'short' }}</span>
+        </div>
+        <span class="actions">
+          <button mat-icon-button color="primary" (click)="openEditDialog(note)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteNote(note)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

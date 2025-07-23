@@ -1,0 +1,42 @@
+.auth-container {
+  margin: 3rem auto;
+  max-width: 350px;
+  background: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: 0 1px 12px rgba(33,33,33, 0.07);
+  padding: 2rem 2.2rem;
+  border: 1px solid var(--color-border);
+}
+
+h2 {
+  margin-bottom: 1.2rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.mat-form-field { width: 100%; }
+.error { color: var(--color-danger); font-size: 1em; text-align: center; }
+.actions { display: flex; justify-content: space-between; align-items: center; }
+button[type='submit'] {
+  margin-top: 0.5em;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.switch-link {
+  display: inline-block;
+  color: var(--color-accent);
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 550px) {
+  .auth-container {
+    padding: 1.2rem .7rem;
+  }
+}
